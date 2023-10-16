@@ -11,9 +11,11 @@ export default function MapDiv(){
         height: '37.6rem'
       };
       
+    
+
       const center = {
-        lat: -3.745,
-        lng: -38.523
+        lat:   -23.589254, 
+        lng: -46.690015
       };
 
       const { isLoaded } = useJsApiLoader({
@@ -26,9 +28,11 @@ export default function MapDiv(){
       const onLoad = useCallback(function callback(map) {
         const bounds = new window.google.maps.LatLngBounds(center);
         map.fitBounds(bounds);
+        
     
         setMap(map)
       }, [])
+
     
       const onUnmount = useCallback(function callback(map) {
         setMap(null)
@@ -38,13 +42,21 @@ export default function MapDiv(){
         
           <GoogleMap
           mapContainerClassName='map-google'
+            options={
+              {
+                disableDefaultUI: true
+              }
+            }
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={9}
+            zoom={17}
+            disableDefaultUI={false}
+            
+            
             
             
           >
-            {/* Child components, such as markers, info windows, etc. */ }
+            {  }
           </GoogleMap>
         
       ) : <>Test</>
