@@ -1,0 +1,17 @@
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.Screen {
+    background-color: blue;
+    width: 23.3rem;
+    height: 41.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
